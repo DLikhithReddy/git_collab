@@ -1,0 +1,345 @@
+
+DeLL@DESKTOP-TT782AL UCRT64 ~/OneDrive/Desktop/project_web
+$ git --version
+git version 2.56.1.windows.1
+
+DeLL@DESKTOP-TT782AL UCRT64 ~/OneDrive/Desktop/project_web
+$ ls
+app.txt
+
+DeLL@DESKTOP-TT782AL UCRT64 ~/OneDrive/Desktop/project_web
+$ cat app.txt
+
+DeLL@DESKTOP-TT782AL UCRT64 ~/OneDrive/Desktop/project_web
+$ cat app.txt
+Hello, Good Morning
+
+DeLL@DESKTOP-TT782AL UCRT64 ~/OneDrive/Desktop/project_web
+$ git status
+fatal: not a git repository (or any of the parent directories): .git
+
+DeLL@DESKTOP-TT782AL UCRT64 ~/OneDrive/Desktop/project_web
+$ git init -b main
+Initialized empty Git repository in C:/Users/DeLL/OneDrive/Desktop/project_web/.git/
+
+DeLL@DESKTOP-TT782AL UCRT64 ~/OneDrive/Desktop/project_web (main)
+$ git status
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        app.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+DeLL@DESKTOP-TT782AL UCRT64 ~/OneDrive/Desktop/project_web (main)
+$ git add app.txt
+
+DeLL@DESKTOP-TT782AL UCRT64 ~/OneDrive/Desktop/project_web (main)
+$ git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   app.txt
+
+
+DeLL@DESKTOP-TT782AL UCRT64 ~/OneDrive/Desktop/project_web (main)
+$ git commit -m "created 1 line"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'DeLL@DESKTOP-TT782AL.(none)')
+
+DeLL@DESKTOP-TT782AL UCRT64 ~/OneDrive/Desktop/project_web (main)
+$ git config global --user.name "DLikhithReddy"
+error: key does not contain a section: global
+
+DeLL@DESKTOP-TT782AL UCRT64 ~/OneDrive/Desktop/project_web (main)
+$ git config --global --user.name "DLikhithReddy"
+error: unknown option `user.name'
+usage: git config list [<file-option>] [<display-option>] [--includes]
+   or: git config get [<file-option>] [<display-option>] [--includes] [--all] [--regexp] [--value=<pattern>] [--fixed-value] [--default=<default>] [--url=<url>] <name>
+   or: git config set [<file-option>] [--type=<type>] [--all] [--value=<pattern>] [--fixed-value] <name> <value>
+   or: git config unset [<file-option>] [--all] [--value=<pattern>] [--fixed-value] <name>
+   or: git config rename-section [<file-option>] <old-name> <new-name>
+   or: git config remove-section [<file-option>] <name>
+   or: git config edit [<file-option>]
+   or: git config [<file-option>] --get-colorbool <name> [<stdout-is-tty>]
+
+Config file location
+    --[no-]global         use global config file
+    --[no-]system         use system config file
+    --[no-]local          use repository config file
+    --[no-]worktree       use per-worktree config file
+    -f, --[no-]file <file>
+                          use given config file
+    --[no-]blob <blob-id> read config from given blob object
+
+Action
+    --get                 get value: name [<value-pattern>]
+    --get-all             get all values: key [<value-pattern>]
+    --get-regexp          get values for regexp: name-regex [<value-pattern>]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [<value-pattern>]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [<value-pattern>]
+    --unset-all           remove all matches: name [<value-pattern>]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    -e, --edit            open an editor
+    --get-color           find the color configured: slot [<default>]
+    --get-colorbool       find the color setting: slot [<stdout-is-tty>]
+
+Display options
+    -z, --[no-]null       terminate values with NUL byte
+    --[no-]name-only      show variable names only
+    --[no-]show-origin    show origin of config (file, standard input, blob, command line)
+    --[no-]show-scope     show scope of config (worktree, local, global, system, command)
+    --[no-]show-names     show config keys in addition to their values
+
+Type
+    -t, --[no-]type <type>
+                          value is given this type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --bool-or-str         value is --bool or string
+    --path                value is a path (file or directory name)
+    --expiry-date         value is an expiry date
+
+Other
+    --[no-]default <value>
+                          with --get, use default value when missing entry
+    --[no-]comment <value>
+                          human-readable comment string (# will be prepended as needed)
+    --[no-]fixed-value    use string equality when comparing values to value pattern
+    --[no-]includes       respect include directives on lookup
+
+
+DeLL@DESKTOP-TT782AL UCRT64 ~/OneDrive/Desktop/project_web (main)
+$ git config --global user.name "DLikhithReddy"
+
+DeLL@DESKTOP-TT782AL UCRT64 ~/OneDrive/Desktop/project_web (main)
+$ git config --global user.email "dlikhithreddy@gmail.com"
+
+DeLL@DESKTOP-TT782AL UCRT64 ~/OneDrive/Desktop/project_web (main)
+$ git commit -m "created 1 line"
+[main (root-commit) c3b6d33] created 1 line
+ 1 file changed, 1 insertion(+)
+ create mode 100644 app.txt
+
+DeLL@DESKTOP-TT782AL UCRT64 ~/OneDrive/Desktop/project_web (main)
+$ git log app.txt
+commit c3b6d3317ea1341a60cf823afe10801aa80efa62 (HEAD -> main)
+Author: DLikhithReddy <dlikhithreddy@gmail.com>
+Date:   Sat Nov 21 11:32:33 2026 +0530
+
+    created 1 line
+
+DeLL@DESKTOP-TT782AL UCRT64 ~/OneDrive/Desktop/project_web (main)
+$ git status
+On branch main
+nothing to commit, working tree clean
+
+DeLL@DESKTOP-TT782AL UCRT64 ~/OneDrive/Desktop/project_web (main)
+$ git remote add origin https://github.com/DLikhithReddy/web_dli.git
+
+DeLL@DESKTOP-TT782AL UCRT64 ~/OneDrive/Desktop/project_web (main)
+$ git push origin main
+info: please complete authentication in your browser...
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 239 bytes | 239.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/DLikhithReddy/web_dli.git
+ * [new branch]      main -> main
+
+DeLL@DESKTOP-TT782AL UCRT64 ~/OneDrive/Desktop/project_web (main)
+$ fvdg
+bash: fvdg: command not found
+
+DeLL@DESKTOP-TT782AL UCRT64 ~/OneDrive/Desktop/project_web (main)
+$ echo "second line--- My name is Likhith" >> app.txt
+
+DeLL@DESKTOP-TT782AL UCRT64 ~/OneDrive/Desktop/project_web (main)
+$ cat app.txt
+Hello, Good Morning
+second line--- My name is Likhith
+
+DeLL@DESKTOP-TT782AL UCRT64 ~/OneDrive/Desktop/project_web (main)
+$ git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   app.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+DeLL@DESKTOP-TT782AL UCRT64 ~/OneDrive/Desktop/project_web (main)
+$ git add app.txt
+warning: in the working copy of 'app.txt', LF will be replaced by CRLF the next time Git touches it
+
+DeLL@DESKTOP-TT782AL UCRT64 ~/OneDrive/Desktop/project_web (main)
+$ git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   app.txt
+
+
+DeLL@DESKTOP-TT782AL UCRT64 ~/OneDrive/Desktop/project_web (main)
+$ git commit -m "added new statement-second commit"
+[main c7506e1] added new statement-second commit
+ 1 file changed, 1 insertion(+)
+
+DeLL@DESKTOP-TT782AL UCRT64 ~/OneDrive/Desktop/project_web (main)
+$ git status
+On branch main
+nothing to commit, working tree clean
+
+DeLL@DESKTOP-TT782AL UCRT64 ~/OneDrive/Desktop/project_web (main)
+$ git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 314 bytes | 314.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/DLikhithReddy/web_dli.git
+   c3b6d33..c7506e1  main -> main
+
+DeLL@DESKTOP-TT782AL UCRT64 ~/OneDrive/Desktop/project_web (main)
+$ cat app2.txt
+apple
+ball
+cat
+
+DeLL@DESKTOP-TT782AL UCRT64 ~/OneDrive/Desktop/project_web (main)
+$ git status
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        app2.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+DeLL@DESKTOP-TT782AL UCRT64 ~/OneDrive/Desktop/project_web (main)
+$ git add app2.txt
+
+DeLL@DESKTOP-TT782AL UCRT64 ~/OneDrive/Desktop/project_web (main)
+$ git commit -m "added new file"
+[main 27c23a4] added new file
+ 1 file changed, 3 insertions(+)
+ create mode 100644 app2.txt
+
+DeLL@DESKTOP-TT782AL UCRT64 ~/OneDrive/Desktop/project_web (main)
+$ git status
+On branch main
+nothing to commit, working tree clean
+
+DeLL@DESKTOP-TT782AL UCRT64 ~/OneDrive/Desktop/project_web (main)
+$ git remote add origin https://github.com/DLikhithReddy/web_dli.git
+error: remote origin already exists.
+
+DeLL@DESKTOP-TT782AL UCRT64 ~/OneDrive/Desktop/project_web (main)
+$ git push origin main
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 289 bytes | 289.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/DLikhithReddy/web_dli.git
+   c7506e1..27c23a4  main -> main
+
+DeLL@DESKTOP-TT782AL UCRT64 ~/OneDrive/Desktop/project_web (main)
+$ git branch
+* main
+
+DeLL@DESKTOP-TT782AL UCRT64 ~/OneDrive/Desktop/project_web (main)
+$ git checkout -b feature_1
+Switched to a new branch 'feature_1'
+
+DeLL@DESKTOP-TT782AL UCRT64 ~/OneDrive/Desktop/project_web (feature_1)
+$ echo " Implement the project---" >> sample.doc
+
+DeLL@DESKTOP-TT782AL UCRT64 ~/OneDrive/Desktop/project_web (feature_1)
+$ cat sample.doc
+ Implement the project---
+
+DeLL@DESKTOP-TT782AL UCRT64 ~/OneDrive/Desktop/project_web (feature_1)
+$ git status
+On branch feature_1
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        sample.doc
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+DeLL@DESKTOP-TT782AL UCRT64 ~/OneDrive/Desktop/project_web (feature_1)
+$ git add .
+warning: in the working copy of 'sample.doc', LF will be replaced by CRLF the next time Git touches it
+
+DeLL@DESKTOP-TT782AL UCRT64 ~/OneDrive/Desktop/project_web (feature_1)
+$ git commit -m "first commit under branch1"
+[feature_1 fc49e46] first commit under branch1
+ 1 file changed, 1 insertion(+)
+ create mode 100644 sample.doc
+
+DeLL@DESKTOP-TT782AL UCRT64 ~/OneDrive/Desktop/project_web (feature_1)
+$ git status
+On branch feature_1
+nothing to commit, working tree clean
+
+DeLL@DESKTOP-TT782AL UCRT64 ~/OneDrive/Desktop/project_web (feature_1)
+$ cat app.txt
+Hello, Good Morning
+second line--- My name is Likhith
+
+DeLL@DESKTOP-TT782AL UCRT64 ~/OneDrive/Desktop/project_web (feature_1)
+$ git checkout main
+Switched to branch 'main'
+
+DeLL@DESKTOP-TT782AL UCRT64 ~/OneDrive/Desktop/project_web (main)
+$ cat feature_1.doc
+cat: feature_1.doc: No such file or directory
+
+DeLL@DESKTOP-TT782AL UCRT64 ~/OneDrive/Desktop/project_web (main)
+$ cat sample.doc
+cat: sample.doc: No such file or directory
+
+DeLL@DESKTOP-TT782AL UCRT64 ~/OneDrive/Desktop/project_web (main)
+$ cat app.txt
+Hello, Good Morning
+second line--- My name is Likhith
+
+DeLL@DESKTOP-TT782AL UCRT64 ~/OneDrive/Desktop/project_web (main)
+$ git merge feature_1
+Updating 27c23a4..fc49e46
+Fast-forward
+ sample.doc | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 sample.doc
+
+DeLL@DESKTOP-TT782AL UCRT64 ~/OneDrive/Desktop/project_web (main)
+$ cat sample.doc
+ Implement the project---
+
+DeLL@DESKTOP-TT782AL UCRT64 ~/OneDrive/Desktop/project_web (main)
+$
